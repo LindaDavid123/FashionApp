@@ -1,0 +1,14 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap
+            android:src="@drawable/kotak"
+            android:gravity="center" />
+    </item>
+
+    <item>
+        <bitmap
+            android:src="@drawable/men"
+            android:gravity="bottom|center_horizontal" />
+    </item>
+
+</layer-list>
