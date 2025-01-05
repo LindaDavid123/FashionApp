@@ -1,0 +1,200 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F3F3">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Panah Kembali (Back Arrow) -->
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:padding="12dp"
+            android:src="@drawable/ic_arrow"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+        <!-- Gambar Produk -->
+        <ImageView
+            android:id="@+id/product_image"
+            android:layout_width="match_parent"
+            android:layout_height="420dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/katia_black"
+            android:padding="50dp" />
+
+        <!-- Ikon Love -->
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="370dp"
+            android:padding="12dp"
+            android:src="@drawable/baseline_favorite_24"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true" />
+
+        <!-- CardView untuk Deskripsi, Pilihan Ukuran, dan Tombol -->
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="430dp"
+        android:layout_height="470dp"
+        android:background="@drawable/rounded_top_background"
+        android:orientation="vertical"
+        android:padding="36dp"
+        tools:layout_editor_absoluteX="-10dp"
+        tools:layout_editor_absoluteY="420dp">
+
+        <!-- Nama dan Harga Produk -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/product_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_bold2"
+                android:text="THE KATIA Black Top"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold2"
+                android:text="$90"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <!-- Deskripsi Produk -->
+        <TextView
+            android:id="@+id/product_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Elevate your wardrobe with The Katia Blacktop. This sleek, versatile piece features a minimalist design with a flattering fit, perfect for casual outings or dressy occasions. Pair it with your favorite jeans, skirts, or tailored pants for a timeless, chic look."
+            android:textColor="#666666"
+            android:textSize="13sp" />
+
+        <!-- Pilihan Ukuran -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Choose Size"
+            android:layout_marginLeft="10dp"
+            android:alpha="0.6"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/circle_background"
+                android:gravity="center"
+                android:text="XL"
+                android:textColor="#5993d2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/circle_background"
+                android:gravity="center"
+                android:text="L"
+                android:textColor="#5993d2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/circle_background"
+                android:gravity="center"
+                android:text="M"
+                android:textColor="#5993d2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/circle_background"
+                android:gravity="center"
+                android:text="S"
+                android:textColor="#5993d2"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/circle_background"
+                android:gravity="center"
+                android:text="XS"
+                android:textColor="#5993d2"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Tombol Add to Cart dan Buy Now -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/add_to_cart_button"
+                android:layout_width="175dp"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Add To Cart"
+                android:textColor="#5993D2"
+                app:strokeColor="#5993d2"
+                app:strokeWidth="1dp" />
+
+            <Button
+                android:id="@+id/buy_now_button"
+                android:layout_width="175dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="#5993D2"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Buy Now"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

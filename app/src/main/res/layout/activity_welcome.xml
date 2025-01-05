@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/header"
         android:layout_width="0dp"
-        android:layout_height="157dp"
+        android:layout_height="100dp"
         android:background="@drawable/wave"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
         android:layout_marginTop="140dp"
         android:fontFamily="@font/poppins_bold2"
         android:text="Welcome!"
-        android:textColor="#5993d2"
+        android:textColor="#83bdde"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintMarginTop="16dp"
@@ -68,7 +68,7 @@
         android:layout_width="220dp"
         android:layout_height="48dp"
         android:layout_marginTop="320dp"
-        android:backgroundTint="#5993d2"
+        android:backgroundTint="#83bdde"
         android:fontFamily="@font/poppins_semibold"
         android:text="Sign Up"
         android:textColor="@color/white"
@@ -101,7 +101,7 @@
         app:layout_constraintTop_toBottomOf="@id/signup_button"
         app:layout_constraintVertical_bias="0.213"
         app:layout_constraintWidth_percent="0.8"
-        app:strokeColor="#5993d2"
+        app:strokeColor="#83bdde"
         app:strokeWidth="1dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
