@@ -1,15 +1,198 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:background="#F8F4F4"
+    tools:context=".HomeFragment">
 
-    <!-- RecyclerView -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewProduk"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="8dp" />
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/usernameLayout"
+        android:layout_width="340dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_edittext_background"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        app:cornerRadius="45dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="40dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="18dp"
+            android:src="@drawable/ic_search" />
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Search here.."
+            android:inputType="text" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="386dp"
+        android:layout_height="232dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/frame1"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="75dp" />
+
+    <ImageView
+        android:layout_width="38dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_notif"
+        tools:layout_editor_absoluteX="358dp"
+        tools:layout_editor_absoluteY="48dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:background="#F8F6F6"
+        android:backgroundTint="#F8F8F8"
+        android:text="Explore"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins_bold2"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="327dp" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+        android:background="@color/black"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="363dp" />
+
+    <TextView
+        android:layout_width="134dp"
+        android:layout_height="30dp"
+        android:background="@drawable/rounded_background"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center"
+        android:text="CATEGORIES"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="138dp"
+        tools:layout_editor_absoluteY="350dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/customCard"
+        android:layout_width="205dp"
+        android:layout_height="180dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="20dp"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="395dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_women"
+
+        <ImageView
+            android:id="@+id/modelImage"
+            android:layout_width="70dp"
+            android:layout_height="180dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/women" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="35dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="WOMEN"
+            android:textColor="#B55F4B"
+            android:textSize="24sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/customCard2"
+        android:layout_width="205dp"
+        android:layout_height="180dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="20dp"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="592dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_kids"
+
+        <ImageView
+            android:id="@+id/modelImage2"
+            android:layout_width="131dp"
+            android:layout_height="185dp"
+            android:layout_marginLeft="70dp"
+            android:src="@drawable/kids" />
+
+        <TextView
+            android:layout_width="55dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="50dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="KIDS"
+            android:textColor="#3A342B"
+            android:textSize="24sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/customCard3"
+        android:layout_width="160dp"
+        android:layout_height="384dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="20dp"
+        tools:layout_editor_absoluteX="235dp"
+        tools:layout_editor_absoluteY="393dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_men"
+
+        <ImageView
+            android:id="@+id/modelImage3"
+            android:layout_width="148dp"
+            android:layout_height="268dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/men" />
+
+        <TextView
+            android:layout_width="55dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="135dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="MEN"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
