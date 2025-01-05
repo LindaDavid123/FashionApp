@@ -33,17 +33,20 @@
         app:cardElevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.406">
 
         <TextView
             android:id="@+id/login_text"
             android:layout_width="104dp"
             android:layout_height="57dp"
             android:layout_gravity="center"
+            android:layout_marginBottom="160dp"
             android:fontFamily="@font/poppins_semibold"
             android:text="Login"
-            android:textColor="#5993d1"
+            android:textColor="#5993d2"
             android:textSize="38sp" />
 
         <LinearLayout
@@ -117,10 +120,30 @@
             android:id="@+id/reminderLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="180dp"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/passwordLayout">
+
+            <Switch
+                android:id="@+id/reminderSwitch"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="53dp" />
         </LinearLayout>
+
+        <TextView
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Reminder me next time"
+            android:textColor="#3c3a3a"
+            android:textSize="12sp" />
+
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
