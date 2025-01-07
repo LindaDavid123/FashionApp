@@ -62,7 +62,7 @@
             android:layout_height="113dp"
             android:layout_gravity="center"
             android:layout_marginRight="100dp"
-            android:src="@drawable/LOEWE" />
+            android:src="@drawable/ic_loewe" />
 
         <TextView
             android:id="@+id/titleProduk2"
@@ -146,7 +146,7 @@
             android:layout_height="145dp"
             android:layout_gravity="center"
             android:layout_marginBottom="30dp"
-            android:src="@drawable/FINLEY" />
+            android:src="@drawable/ic_finley" />
 
         <TextView
             android:id="@+id/displayTittle"
@@ -209,7 +209,7 @@
             android:layout_height="113dp"
             android:layout_gravity="center"
             android:layout_marginRight="100dp"
-            android:src="@drawable/ZYCCIOTTO" />
+            android:src="@drawable/ic_zycciotto" />
 
         <TextView
             android:id="@+id/titleProduk"
@@ -264,7 +264,7 @@
             android:layout_height="145dp"
             android:layout_gravity="center"
             android:layout_marginBottom="30dp"
-            android:src="@drawable/SEPATU" />
+            android:src="@drawable/ic_sepatu" />
 
         <TextView
             android:id="@+id/displayTittle2"
@@ -310,7 +310,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="596dp"
-        android:src="@drawable/Ellipse"
+        android:src="@drawable/ic_ellipse"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
