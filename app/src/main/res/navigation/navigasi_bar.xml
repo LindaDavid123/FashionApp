@@ -24,6 +24,6 @@
         android:id="@+id/profileFragment"
         android:name="com.example.fashion.Profile"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" /
+        tools:layout="@layout/fragment_profile" />
 
 </navigation>

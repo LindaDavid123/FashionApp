@@ -1,14 +1,316 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#83BDDE"
     tools:context=".Order">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_arrow_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="166dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="123dp"
+        android:fontFamily="@font/poppins_bold2"
+        android:text="MY ORDER"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="790dp"
+        android:layout_marginTop="105dp"
+        android:background="@drawable/corner_login_background"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardProduk"
+        android:layout_width="385dp"
+        android:layout_height="164dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="13dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageProduct2"
+            android:layout_width="100dp"
+            android:layout_height="113dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="100dp"
+            android:src="@drawable/LOEWE" />
+
+        <TextView
+            android:id="@+id/titleProduk2"
+            android:layout_width="196dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="55dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/poppins_bold2"
+            android:text="LOEWE Anagram Pocket Sweater"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/product_size2"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="18dp"
+            android:background="#EBEBEB"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Size: M"
+            android:textColorHint="#7f7f7f"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/product_price2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Rp 450.000"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:id="@+id/lineView"
+        android:layout_width="8dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="25dp"
+        android:background="#83bdde"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardProduk2" />
+
+    <TextView
+        android:id="@+id/subtext"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/poppins_bold2"
+        android:text="YOU ALSO VIEWED"
+        android:textColorHint="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/lineView"
+        app:layout_constraintTop_toBottomOf="@+id/cardProduk2" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/displayCard"
+        android:layout_width="188dp"
+        android:layout_height="240dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="210dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtext">
+
+        <ImageView
+            android:id="@+id/displayProduk"
+            android:layout_width="134dp"
+            android:layout_height="145dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/FINLEY" />
+
+        <TextView
+            android:id="@+id/displayTittle"
+            android:layout_width="121dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/poppins_bold2"
+            android:text="Finley Grey Parachute Pants"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="95dp"
+            android:layout_marginRight="26dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Rp 150.000"
+            android:textColor="#7C7B7B"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_fav_grey" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="200dp"
+            android:layout_marginRight="15dp"
+            android:alpha="0.8"
+            android:src="@drawable/ic_cart" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardProduk2"
+        android:layout_width="385dp"
+        android:layout_height="164dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="427dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageProduct"
+            android:layout_width="100dp"
+            android:layout_height="113dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="100dp"
+            android:src="@drawable/ZYCCIOTTO" />
+
+        <TextView
+            android:id="@+id/titleProduk"
+            android:layout_width="196dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="55dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/poppins_bold2"
+            android:text="ZYCCIOTTO Oversized Sweatshirt"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/product_size"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="18dp"
+            android:background="#EBEBEB"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Size: M"
+            android:textColorHint="#7f7f7f"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Rp 450.000"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="188dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="12dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtext">
+
+        <ImageView
+            android:id="@+id/displayProduk2"
+            android:layout_width="134dp"
+            android:layout_height="145dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="30dp"
+            android:src="@drawable/SEPATU" />
+
+        <TextView
+            android:id="@+id/displayTittle2"
+            android:layout_width="121dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:layout_marginRight="16dp"
+            android:fontFamily="@font/poppins_bold2"
+            android:text="Dr Martens Jadon Hi Boots"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="95dp"
+            android:layout_marginRight="26dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Rp 2.425.000"
+            android:textColor="#7C7B7B"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_fav_grey" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="200dp"
+            android:layout_marginRight="15dp"
+            android:alpha="0.8"
+            android:src="@drawable/ic_cart" />
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="596dp"
+        android:src="@drawable/Ellipse"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

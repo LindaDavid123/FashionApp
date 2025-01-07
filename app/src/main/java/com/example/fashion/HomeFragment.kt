@@ -5,13 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.fashion.client.RetrofitClient
-import com.example.fashion.response.produk.ProdukResponse
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,37 +20,6 @@ class HomeFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-
-    private  val listProduk = ArrayList<ProdukResponse>()
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        val RVQuiz: RecyclerView = view.findViewById(R.id.recyclerViewProduk)
-        RVQuiz.layoutManager = GridLayoutManager(activity, 2)
-
-        RetrofitClient.instance.getProduk().enqueue(
-            object : Callback<ArrayList<ProdukResponse>> {
-                override fun onResponse(
-                    call: Call<ArrayList<ProdukResponse>>,
-                    response: Response<ArrayList<ProdukResponse>>
-                ) {
-                    listProduk.clear()
-                    response.body().let {
-                        if (it != null) {
-                            listProduk.addAll(it)
-                        }
-                    }
-                    var adapter = AdapterProduk(listProduk)
-                    RVQuiz.adapter = adapter
-                }
-
-                override fun onFailure(p0: Call<ArrayList<ProdukResponse>>, p1: Throwable) {
-                    TODO("Not yet implemented")
-                }
-            }
-        )
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
