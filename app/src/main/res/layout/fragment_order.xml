@@ -313,4 +313,5 @@
         android:src="@drawable/ic_ellipse"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

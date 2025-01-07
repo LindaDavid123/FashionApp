@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/header"
         android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:layout_height="160dp"
         android:background="@drawable/wave"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -98,5 +98,4 @@
         app:layout_constraintWidth_percent="0.8"
         app:strokeColor="#5993d2"
         app:strokeWidth="1dp" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
