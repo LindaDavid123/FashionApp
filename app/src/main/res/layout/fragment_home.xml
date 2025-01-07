@@ -88,6 +88,7 @@
         app:layout_constraintTop_toBottomOf="@id/textView2" />
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="134dp"
         android:layout_height="30dp"
         android:layout_marginTop="32dp"
@@ -107,14 +108,18 @@
         android:layout_width="205dp"
         android:layout_height="180dp"
         android:layout_margin="16dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="26dp"
         app:cardCornerRadius="20dp"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="395dp">
+        app:layout_constraintBottom_toTopOf="@+id/customCard2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" >
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/gradient_women"
+            android:background="@drawable/gradient_women"/>
 
         <ImageView
             android:id="@+id/modelImage"
@@ -140,14 +145,16 @@
         android:layout_width="205dp"
         android:layout_height="180dp"
         android:layout_margin="16dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="21dp"
         app:cardCornerRadius="20dp"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="592dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customCard">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/gradient_kids"
+            android:background="@drawable/gradient_kids"/>
 
         <ImageView
             android:id="@+id/modelImage2"
@@ -171,16 +178,18 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/customCard3"
         android:layout_width="160dp"
-        android:layout_height="384dp"
+        android:layout_height="378dp"
         android:layout_margin="16dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="16dp"
         app:cardCornerRadius="20dp"
-        tools:layout_editor_absoluteX="235dp"
-        tools:layout_editor_absoluteY="393dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/gradient_men"
+            android:background="@drawable/gradient_men"/>
 
         <ImageView
             android:id="@+id/modelImage3"
@@ -199,8 +208,6 @@
             android:text="MEN"
             android:textColor="@color/white"
             android:textSize="24sp" />
-
     </androidx.cardview.widget.CardView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
