@@ -1,5 +1,6 @@
 package com.example.fashion
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -16,7 +17,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class ProductActivity : AppCompatActivity() {
-    private  val listProduk = ArrayList<ProdukResponse>()
+    private val listProduk = ArrayList<ProdukResponse>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,17 +34,23 @@ class ProductActivity : AppCompatActivity() {
                     response: Response<ArrayList<ProdukResponse>>
                 ) {
                     listProduk.clear()
-                    response.body().let {
-                        if (it != null) {
-                            listProduk.addAll(it)
-                        }
+                    response.body()?.let {
+                        listProduk.addAll(it)
                     }
-                    var adapter = AdapterProduk(listProduk)
+                    val adapter = AdapterProduk(listProduk) { produk ->
+                        val intent = Intent(this@ProductActivity, DetailProductActivity::class.java).apply {
+                            putExtra("nama_produk", produk.nama_produk)
+                            putExtra("harga", produk.harga)
+                            putExtra("deskripsi", produk.deskripsi)
+                            putExtra("gambar_produk", "http://192.168.100.221:80/fashion_api/image_product/${produk.gambar_produk}")
+                        }
+                        startActivity(intent)
+                    }
                     RVQuiz.adapter = adapter
                 }
 
-                override fun onFailure(p0: Call<ArrayList<ProdukResponse>>, p1: Throwable) {
-                    Log.e("API Error", "Request failed: ${p1.message}")
+                override fun onFailure(call: Call<ArrayList<ProdukResponse>>, t: Throwable) {
+                    Log.e("API Error", "Request failed: ${t.message}")
                 }
             }
         )
