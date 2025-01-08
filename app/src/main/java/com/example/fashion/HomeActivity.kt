@@ -20,26 +20,26 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         // Initialize views
-        imageView3 = findViewById(R.id.imageView3)
-        imageView4 = findViewById(R.id.imageView4)
-        imageView6 = findViewById(R.id.imageView6)
-        imageView7 = findViewById(R.id.imageView7)
-        imageView10 = findViewById(R.id.imageView10)
-        imageView11 = findViewById(R.id.imageView11)
-        buttonCategories = findViewById(R.id.button)
-
-        // Set click listeners
-        buttonCategories.setOnClickListener {
-            showToast("Categories clicked!")
-        }
-
-        imageView10.setOnClickListener {
-            showToast("Women's category clicked!")
-        }
-
-        imageView7.setOnClickListener {
-            showToast("Notification clicked!")
-        }
+//        imageView3 = findViewById(R.id.imageView3)
+//        imageView4 = findViewById(R.id.imageView4)
+//        imageView6 = findViewById(R.id.imageView6)
+//        imageView7 = findViewById(R.id.imageView7)
+//        imageView10 = findViewById(R.id.imageView10)
+//        imageView11 = findViewById(R.id.imageView11)
+//        buttonCategories = findViewById(R.id.button)
+//
+//        // Set click listeners
+//        buttonCategories.setOnClickListener {
+//            showToast("Categories clicked!")
+//        }
+//
+//        imageView10.setOnClickListener {
+//            showToast("Women's category clicked!")
+//        }
+//
+//        imageView7.setOnClickListener {
+//            showToast("Notification clicked!")
+//        }
     }
 
     // Utility function to show a toast
