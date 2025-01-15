@@ -35,8 +35,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
+        android:id="@+id/view"
         android:layout_width="match_parent"
-        android:layout_height="790dp"
+        android:layout_height="900dp"
         android:layout_marginTop="105dp"
         android:background="@drawable/corner_login_background"
         app:layout_constraintTop_toTopOf="parent"
@@ -309,7 +310,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="596dp"
+        android:layout_marginTop="630dp"
         android:src="@drawable/ic_ellipse"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp" />

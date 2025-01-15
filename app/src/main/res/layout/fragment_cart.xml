@@ -1,14 +1,317 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Cart">
+    android:background="#F3F3F3"
+    tools:context=".Order">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="528dp"
+        android:src="@drawable/cart_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
-</FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="390dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="758dp"
+        android:background="@drawable/rounded_search2"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/search_button"
+            android:layout_width="150dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="25dp"
+            android:background="@null"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Search product here.."
+            android:inputType="text"
+            android:textColor="#575555"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="140dp"
+            android:src="@drawable/ic_search2" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_arrow_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="122dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="123dp"
+        android:fontFamily="@font/poppins_bold2"
+        android:text="CART"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardProduk"
+        android:layout_width="385dp"
+        android:layout_height="164dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="13dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <CheckBox
+            android:id="@+id/checkboxProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="160dp"
+            android:buttonTint="#212121" />
+
+        <ImageView
+            android:id="@+id/imageProduct"
+            android:layout_width="100dp"
+            android:layout_height="113dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="95dp"
+            android:src="@drawable/ic_faiable" />
+
+        <TextView
+            android:id="@+id/titleProduk"
+            android:layout_width="196dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="60dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/poppins_bold2"
+            android:text="FAIABLE Mens Oversized Hoodie "
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/product_size"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="12dp"
+            android:background="#EBEBEB"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Size: M"
+            android:textColorHint="#7f7f7f"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Rp 450.000"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardProduk2"
+        android:layout_width="385dp"
+        android:layout_height="164dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginEnd="13dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <CheckBox
+            android:id="@+id/checkboxProduct2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="160dp"
+            android:buttonTint="#212121" />
+
+        <ImageView
+            android:id="@+id/imageProduct2"
+            android:layout_width="100dp"
+            android:layout_height="113dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="95dp"
+            android:src="@drawable/ic_loewe" />
+
+        <TextView
+            android:id="@+id/titleProduk2"
+            android:layout_width="196dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="60dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/poppins_bold2"
+            android:text="LOEWE Anagram Pocket Sweater"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/product_size2"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="10dp"
+            android:background="#EBEBEB"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Size: M"
+            android:textColorHint="#7f7f7f"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/product_price2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Rp 450.000"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardProduk3"
+        android:layout_width="385dp"
+        android:layout_height="164dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="536dp"
+        android:layout_marginEnd="13dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <CheckBox
+            android:id="@+id/checkboxProduct3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="160dp"
+            android:buttonTint="#212121" />
+
+        <ImageView
+            android:id="@+id/imageProduct3"
+            android:layout_width="100dp"
+            android:layout_height="113dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="95dp"
+            android:src="@drawable/ic_zycciotto" />
+
+        <TextView
+            android:id="@+id/titleProduk3"
+            android:layout_width="196dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="60dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/poppins_bold2"
+            android:text="ZYCCIOTTO Oversize Sweatshirt"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/product_size3"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="10dp"
+            android:background="#EBEBEB"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Size: M"
+            android:textColorHint="#7f7f7f"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/product_price3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Rp 450.000"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <CheckBox
+        android:id="@+id/checkboxOutline"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="708dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="158dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="227dp"
+        android:layout_marginBottom="172dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Select all produk"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
