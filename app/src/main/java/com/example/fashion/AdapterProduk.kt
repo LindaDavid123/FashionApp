@@ -27,7 +27,7 @@ class AdapterProduk(private val listProduk:ArrayList<ProdukResponse>, private va
 
             textProduct.text = name
             textPrice.text = harga
-            var url = "http://172.25.206.109:80/fashion_api/image_product/" + image
+            var url = "http://172.20.10.4:80/fashion_api/image_product/" + image
             Picasso.get().load(url).into(imgProduct)
 
             itemView.setOnClickListener {
