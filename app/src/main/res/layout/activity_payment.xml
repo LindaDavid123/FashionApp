@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F3F3"
+    tools:context=".Payment">
+
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="Back"
+        android:src="@drawable/ic_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginEnd="139dp"
+        android:layout_marginBottom="837dp"
+        android:fontFamily="@font/poppins_bold2"
+        android:text="PAYMENT"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/card_image"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="590dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/choose_payment_method"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Choose payment method:"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_image" />
+
+    <LinearLayout
+        android:id="@+id/payment_methods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/choose_payment_method"
+        app:layout_marginTop="8dp">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:background="@drawable/payment_option_background"
+            android:padding="10dp"
+            android:src="@drawable/mastercard" />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="18dp"
+            android:background="@drawable/payment_option_background"
+            android:padding="8dp"
+            android:src="@drawable/apple" />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="18dp"
+            android:background="@drawable/payment_option_background"
+            android:padding="10dp"
+            android:src="@drawable/paypall" />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="18dp"
+            android:background="@drawable/payment_option_background"
+            android:padding="5dp"
+            android:src="@drawable/ic_dots" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/promoCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="488dp"
+        android:layout_marginEnd="241dp"
+        android:layout_marginBottom="389dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Promo Code"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/promoLayout"
+        android:layout_width="354dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="290dp"
+        android:layout_marginBottom="270dp"
+        android:background="@drawable/rounded_promo_background"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.849">
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Promo code.."
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/applyButton"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#5993d2"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Apply"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:cornerRadius="15dp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="208dp"
+        android:layout_marginBottom="142dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Total Payment:"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/paymentButton"
+        android:layout_width="350dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="320dp"
+        android:backgroundTint="#5993d2"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Payment"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:cornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.573"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.866"
+        app:layout_constraintWidth_percent="0.8" />
+</androidx.constraintlayout.widget.ConstraintLayout
