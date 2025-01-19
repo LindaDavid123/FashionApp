@@ -1,5 +1,6 @@
 package com.example.fashion
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -46,7 +47,12 @@ class login : AppCompatActivity() {
                     if (loginResponse != null && loginResponse.success) {
                         Toast.makeText(this@login, "Login Berhasil", Toast.LENGTH_SHORT).show()
 
-                        // Navigasi ke halaman berikutnya (misalnya ProductActivity)
+                        val userId = loginResponse?.data?.user_id
+                        val sharedPreferences = getSharedPreferences("USER_SESSION", Context.MODE_PRIVATE)
+                        val editor = sharedPreferences.edit()
+                        editor.putString("user_id", userId)
+                        editor.apply()
+
                         val intent = Intent(this@login, Home::class.java)
                         startActivity(intent)
                         finish()
