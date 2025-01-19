@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class Home : AppCompatActivity() {
 
@@ -23,6 +24,16 @@ class Home : AppCompatActivity() {
 
         replaceFragment(HomeFragment())
 
+        val navView: BottomNavigationView = findViewById(R.id.nav_view)
 
+        navView.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.homeFragment -> replaceFragment(HomeFragment())
+                R.id.listFragment -> replaceFragment(Order())
+                R.id.cartFragment -> replaceFragment(Cart())
+                R.id.profileFragment -> replaceFragment(Profile())
+            }
+            true
+        }
     }
 }

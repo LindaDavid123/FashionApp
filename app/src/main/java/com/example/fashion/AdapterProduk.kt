@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.RecyclerView
+import com.example.fashion.client.RetrofitClient
 import com.example.fashion.response.produk.ProdukResponse
 import com.squareup.picasso.Picasso
 
@@ -27,7 +28,7 @@ class AdapterProduk(private val listProduk:ArrayList<ProdukResponse>, private va
 
             textProduct.text = name
             textPrice.text = harga
-            var url = "http://172.20.10.4:80/fashion_api/image_product/" + image
+            var url = RetrofitClient.URL_PRODUCT + image
             Picasso.get().load(url).into(imgProduct)
 
             itemView.setOnClickListener {

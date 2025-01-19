@@ -13,7 +13,6 @@
 
             <item>
                 <bitmap
-                    android:src="@drawable/ic_check"
                 android:gravity="center" />
             </item>
         </layer-list>

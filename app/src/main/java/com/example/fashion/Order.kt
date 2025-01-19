@@ -1,10 +1,21 @@
 package com.example.fashion
 
+import android.content.Context.MODE_PRIVATE
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.fashion.client.RetrofitClient
+import com.example.fashion.response.produk.ProdukResponse
+import com.example.fashion.response.produk.UserOrderResponse
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -20,6 +31,36 @@ class Order : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val sharedPreferences = requireContext().getSharedPreferences("USER_SESSION", MODE_PRIVATE)
+        val userId = sharedPreferences.getString("user_id", "Unknown")
+        Log.e("id", "${userId}")
+
+        val RVOrder: RecyclerView = view.findViewById(R.id.recyclerViewOrder)
+        RVOrder.layoutManager = GridLayoutManager(activity, 1)
+
+        if (userId != null) {
+            RetrofitClient.instance.getUserOrder(userId).enqueue(
+                object : Callback<ArrayList<UserOrderResponse>> {
+                    override fun onResponse(
+                        call: Call<ArrayList<UserOrderResponse>>,
+                        response: Response<ArrayList<UserOrderResponse>>
+                    ) {
+                        val listOrder = response.body() ?: arrayListOf()
+                        val adapter = AdapterUserOrder(listOrder)
+                        RVOrder.adapter = adapter
+                    }
+
+                    override fun onFailure(call: Call<ArrayList<UserOrderResponse>>, t: Throwable) {
+                        Log.e("API Error", "Request failed: ${t.message}")
+                    }
+                }
+            )
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
