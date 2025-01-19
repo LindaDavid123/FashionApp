@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="start_color">#E2E2E2</color>
+    <color name="men_end_color">#6A8AB1</color>
+    <color name="kids_end_color">#B5A997</color>
+    <color name="original_end_color">#F5BCAE</color>
 </resources>

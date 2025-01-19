@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="164dp"
-    android:layout_margin="16dp"
+    android:layout_margin="8dp"
     app:cardCornerRadius="8dp"
     app:cardElevation="4dp"
     android:background="@color/white">
@@ -27,7 +27,6 @@
             android:src="@drawable/ic_faiable"
             android:scaleType="centerCrop" />
 
-        <!-- Product Details -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -40,12 +39,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="FAIABLE Mens Oversized Hoodie"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:fontFamily="@font/poppins_semibold"
                 android:textColor="@color/black" />
 
             <TextView
-                android:id="@+id/productSize"
+                android:id="@+id/product_size"
                 android:layout_width="60dp"
                 android:layout_height="24dp"
                 android:paddingStart="4dp"

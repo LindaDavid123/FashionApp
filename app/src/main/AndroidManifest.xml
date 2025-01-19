@@ -18,9 +18,12 @@
         <activity
             android:name=".DetailProductActivity"
             android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".ProductActivity"-->
-<!--            android:exported="false" />-->
+        <activity
+            android:name=".detailCheckout"
+            android:exported="false" />
+        <activity
+            android:name=".ProductActivity"
+            android:exported="false" />
         <activity
             android:name=".AdapterProduk"
             android:exported="false" />

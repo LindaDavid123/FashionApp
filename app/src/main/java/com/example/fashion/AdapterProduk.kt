@@ -1,6 +1,7 @@
 package com.example.fashion
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,7 +33,7 @@ class AdapterProduk(private val listProduk:ArrayList<ProdukResponse>, private va
             Picasso.get().load(url).into(imgProduct)
 
             itemView.setOnClickListener {
-                onItemClick(response)  // Panggil callback ketika item diklik
+                onItemClick(response)
             }
         }
     }

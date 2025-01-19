@@ -1,10 +1,12 @@
 package com.example.fashion
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.cardview.widget.CardView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,8 +35,31 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
+
+        val cardWomen: CardView = view.findViewById(R.id.customCard)
+        val cardKids: CardView = view.findViewById(R.id.customCard2)
+        val cardMen: CardView = view.findViewById(R.id.customCard3)
+
+        cardWomen.setOnClickListener {
+            val intent = Intent(activity, ProductActivity::class.java)
+            intent.putExtra("category", "women")
+            startActivity(intent)
+        }
+
+        cardKids.setOnClickListener {
+            val intent = Intent(activity, ProductActivity::class.java)
+            intent.putExtra("category", "kids")
+            startActivity(intent)
+        }
+
+        cardMen.setOnClickListener {
+            val intent = Intent(activity, ProductActivity::class.java)
+            intent.putExtra("category", "men")
+            startActivity(intent)
+        }
+
+        return view
     }
 
     companion object {

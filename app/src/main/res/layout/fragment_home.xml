@@ -130,6 +130,7 @@
             android:src="@drawable/women" />
 
         <TextView
+            android:id="@+id/productWomen"
             android:layout_width="100dp"
             android:layout_height="35dp"
             android:layout_gravity="center"
@@ -164,6 +165,7 @@
             android:src="@drawable/kids" />
 
         <TextView
+            android:id="@+id/productKids"
             android:layout_width="55dp"
             android:layout_height="36dp"
             android:layout_gravity="center"
@@ -200,6 +202,7 @@
             android:src="@drawable/men" />
 
         <TextView
+            android:id="@+id/productMen"
             android:layout_width="55dp"
             android:layout_height="36dp"
             android:layout_gravity="center"

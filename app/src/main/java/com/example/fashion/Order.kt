@@ -37,7 +37,6 @@ class Order : Fragment() {
 
         val sharedPreferences = requireContext().getSharedPreferences("USER_SESSION", MODE_PRIVATE)
         val userId = sharedPreferences.getString("user_id", "Unknown")
-        Log.e("id", "${userId}")
 
         val RVOrder: RecyclerView = view.findViewById(R.id.recyclerViewOrder)
         RVOrder.layoutManager = GridLayoutManager(activity, 1)

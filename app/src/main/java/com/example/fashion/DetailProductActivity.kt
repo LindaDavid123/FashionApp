@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.fashion.client.RetrofitClient
 import com.squareup.picasso.Picasso
 
 class DetailProductActivity : AppCompatActivity() {
@@ -33,7 +34,7 @@ class DetailProductActivity : AppCompatActivity() {
         productPrice.text = "$$harga"
         productDescription.text = deskripsi
         if (gambarProduk != null) {
-            Picasso.get().load(gambarProduk).into(productImage)
+            Picasso.get().load(RetrofitClient.URL_PRODUCT + "${gambarProduk}").into(productImage)
         }
 
         backArrow.setOnClickListener {
