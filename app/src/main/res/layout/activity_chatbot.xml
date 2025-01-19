@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFAFA"
+    tools:context=".chatbot_activity">
+
+    <ImageView
+        android:id="@+id/back_arrow"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginBottom="837dp"
+        android:src="@drawable/ic_arrow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_user"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="165dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="166dp"
+        android:layout_marginBottom="782dp"
+        android:contentDescription="User"
+        android:src="@drawable/bot_pic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="168dp"
+        android:layout_marginEnd="168dp"
+        android:layout_marginBottom="740dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Colora"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/chatbotLayout"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="204dp"
+        android:layout_marginEnd="115dp"
+        android:background="@drawable/chatbot_grey_background"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="235dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="12dp"
+            android:background="@null"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Halo User, saya Colora!"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="36dp"
+            tools:layout_editor_absoluteY="194dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chatbotLayout2"
+        android:layout_width="320dp"
+        android:layout_height="140dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="512dp"
+        android:background="@drawable/chatbot_grey_background"
+        android:elevation="4dp"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="290dp"
+            android:layout_height="130dp"
+            android:layout_marginLeft="8dp"
+            android:background="@null"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Selamat datang ke FITTORA. Ada yang bisa saya bantu hari ini? Kamu bisa tanyakan langsung kepada saya, atau pilih topik yang ada dibawah ini"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="36dp"
+            tools:layout_editor_absoluteY="194dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chatbotLayout3"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="168dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="434dp"
+        android:background="@drawable/button_border"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:background="@null"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Pelacakan Pesanan"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="36dp"
+            tools:layout_editor_absoluteY="194dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chatbotLayout4"
+        android:layout_width="278dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="168dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="372dp"
+        android:background="@drawable/button_border"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:background="@null"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Status pengembalian dana"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="36dp"
+            tools:layout_editor_absoluteY="194dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/chatbotLayout5"
+        android:layout_width="228dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="168dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="312dp"
+        android:background="@drawable/button_border"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:background="@null"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Status Pengembalian"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="36dp"
+            tools:layout_editor_absoluteY="194dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/message"
+        android:layout_width="310dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/rounded_text"
+        android:padding="12dp"
+        android:elevation="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/messageText"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="18dp"
+            android:background="@null"
+            android:fontFamily="@font/poppins_medium"
+            android:hint="Type a message..."
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="330dp"
+        android:layout_marginBottom="56dp"
+        android:src="@drawable/ic_send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
